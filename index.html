@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oğuzcan UZUNÖNER - Software Developer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav-container">
+        <div class="logo">Oğuzcan Uzunöner</div>
+        <ul class="nav-links">
+          <li><a href="#hero" data-en="Home" data-tr="Ana Sayfa">Home</a></li>
+          <li><a href="#about" data-en="About" data-tr="Hakkımda">About</a></li>
+          <li>
+            <a href="#experience" data-en="Experience" data-tr="Deneyim"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a href="#skills" data-en="Skills" data-tr="Yetenekler">Skills</a>
+          </li>
+          <li>
+            <a href="#contact" data-en="Contact" data-tr="İletişim">Contact</a>
+          </li>
+          <li class="language-switcher">
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="tr">TR</button>
+          </li>
+        </ul>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-close" id="mobileClose">×</button>
+      <a href="#hero" data-en="Home" data-tr="Ana Sayfa">Home</a>
+      <a href="#about" data-en="About" data-tr="Hakkımda">About</a>
+      <a href="#experience" data-en="Experience" data-tr="Deneyim"
+        >Experience</a
+      >
+      <a href="#skills" data-en="Skills" data-tr="Yetenekler">Skills</a>
+      <a href="#contact" data-en="Contact" data-tr="İletişim">Contact</a>
+      <div class="mobile-controls">
+        <button class="theme-toggle" id="mobileThemeToggle">🌙</button>
+        <button class="lang-btn active" data-lang="en" id="mobileLangEn">
+          EN
+        </button>
+        <button class="lang-btn" data-lang="tr" id="mobileLangTr">TR</button>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <div class="hero-greeting" data-en="Hello, I'm" data-tr="Merhaba, ben">
+          Hello, I'm
+        </div>
+        <h1 class="hero-name">Oğuzcan Uzunöner</h1>
+        <h2 class="hero-title">Software Developer</h2>
+        <p
+          class="hero-description"
+          data-en="I'm a software developer who creates high-performance web applications, prioritizes user experience, and builds scalable solutions with modern technologies."
+          data-tr="Yüksek performanslı web uygulamaları geliştiren, kullanıcı deneyimini ön planda tutan ve modern teknolojilerle ölçeklenebilir çözümler üreten bir yazılım geliştiricisiyim."
+        >
+          I'm a software developer who creates high-performance web
+          applications, prioritizes user experience, and builds scalable
+          solutions with modern technologies.
+        </p>
+        <div class="cta-buttons">
+          <a
+            href="#contact"
+            class="btn btn-primary"
+            data-en="Get In Touch"
+            data-tr="İletişime Geç"
+            >Get In Touch</a
+          >
+          <a
+            href="#experience"
+            class="btn btn-secondary"
+            data-en="My Experience"
+            data-tr="Deneyimlerim"
+            >My Experience</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2
+          class="section-title fade-in"
+          data-en="Success Statistics"
+          data-tr="Başarı İstatistikleri"
+        >
+          Success Statistics
+        </h2>
+        <p
+          class="section-subtitle fade-in"
+          data-en="My professional journey in numbers"
+          data-tr="Rakamlarla profesyonel yolculuğum"
+        >
+          My professional journey in numbers
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat-item fade-in">
+            <div class="stat-number" data-target="3">0</div>
+            <div
+              class="stat-label"
+              data-en="Years Experience"
+              data-tr="Yıl Deneyim"
+            >
+              Years Experience
+            </div>
+          </div>
+          <div class="stat-item fade-in">
+            <div class="stat-number" data-target="100">0</div>
+            <div
+              class="stat-label"
+              data-en="K+ Daily Users"
+              data-tr="K+ Günlük Kullanıcı"
+            >
+              K+ Daily Users
+            </div>
+          </div>
+          <div class="stat-item fade-in">
+            <div class="stat-number" data-target="1">0</div>
+            <div
+              class="stat-label"
+              data-en="M+ Daily Requests"
+              data-tr="M+ Günlük İstek"
+            >
+              M+ Daily Requests
+            </div>
+          </div>
+          <div class="stat-item fade-in">
+            <div class="stat-number" data-target="40">0</div>
+            <div
+              class="stat-label"
+              data-en="% Efficiency Increase"
+              data-tr="% Verimlilik Artışı"
+            >
+              % Efficiency Increase
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section alt-bg" id="experience">
+      <div class="container">
+        <h2
+          class="section-title fade-in"
+          data-en="Professional Experience"
+          data-tr="Profesyonel Deneyim"
+        >
+          Professional Experience
+        </h2>
+        <p
+          class="section-subtitle fade-in"
+          data-en="Key projects and achievements in my career"
+          data-tr="Kariyerimde yer alan önemli projeler ve başarılar"
+        >
+          Key projects and achievements in my career
+        </p>
+
+        <div class="experience-grid">
+          <div class="exp-card fade-in">
+            <div class="company-name">DITRAVO</div>
+            <div class="position">Software Developer</div>
+            <div
+              class="duration"
+              data-en="September 2022 – Present"
+              data-tr="Eylül 2022 – Günümüz"
+            >
+              September 2022 – Present
+            </div>
+            <p
+              class="exp-description"
+              data-en="Software development at Turkey's leading transportation and logistics technology company"
+              data-tr="Türkiye'nin lider ulaşım ve lojistik teknoloji şirketinde yazılım geliştirme"
+            >
+              Software development at Turkey's leading transportation and
+              logistics technology company
+            </p>
+
+            <!-- Railway Project -->
+            <div class="project-box project-box-railway">
+              <h4
+                class="project-title"
+                data-en="🚄 Railway Transportation Platform"
+                data-tr="🚄 Demiryolu Ulaşım Platformu"
+              >
+                🚄 Railway Transportation Platform
+              </h4>
+              <ul class="achievements project-achievements">
+                <li
+                  data-en="Developed ticketing system serving 100,000+ daily users"
+                  data-tr="100.000+ günlük kullanıcıya hizmet veren biletleme sistemini geliştirdim"
+                >
+                  Developed ticketing system serving 100,000+ daily users
+                </li>
+                <li
+                  data-en="Designed ticket search, selection and purchase flow with Vue.js and TypeScript"
+                  data-tr="Vue.js ve TypeScript ile bilet arama, seçim ve satın alma akışını tasarladım"
+                >
+                  Designed ticket search, selection and purchase flow with
+                  Vue.js and TypeScript
+                </li>
+                <li
+                  data-en="Created interactive train seat map and selection system with Pixi.js"
+                  data-tr="Pixi.js ile interaktif tren koltuk haritası ve seçim sistemi oluşturdum"
+                >
+                  Created interactive train seat map and selection system with
+                  Pixi.js
+                </li>
+                <li
+                  data-en="Successfully completed Yolcu360 car rental integration"
+                  data-tr="Yolcu360 araç kiralama entegrasyonunu başarıyla tamamladım"
+                >
+                  Successfully completed Yolcu360 car rental integration
+                </li>
+                <li
+                  data-en="Integrated real-time seat status and price updates"
+                  data-tr="Gerçek zamanlı koltuk durumu ve fiyat güncellemeleri entegre ettim"
+                >
+                  Integrated real-time seat status and price updates
+                </li>
+                <li
+                  data-en="Improved user experience by 35% with mobile-responsive ticketing flow"
+                  data-tr="Mobil uyumlu biletleme akışı ile kullanıcı deneyimini %35 artırdım"
+                >
+                  Improved user experience by 35% with mobile-responsive
+                  ticketing flow
+                </li>
+                <li
+                  data-en="Optimized ticketing APIs with Java Spring Boot, improving response time by 20%"
+                  data-tr="Java Spring Boot ile biletleme API'lerini optimize ederek yanıt süresini %20 iyileştirdim"
+                >
+                  Optimized ticketing APIs with Java Spring Boot, improving
+                  response time by 20%
+                </li>
+              </ul>
+            </div>
+
+            <!-- Logistics Project -->
+            <div class="project-box project-box-logistics">
+              <h4
+                class="project-title"
+                data-en="🚚 International Logistics Platform"
+                data-tr="🚚 Uluslararası Lojistik Platformu"
+              >
+                🚚 International Logistics Platform
+              </h4>
+              <ul class="achievements project-achievements">
+                <li
+                  data-en="Developed modern frontend architecture with Vue3 Composition API"
+                  data-tr="Vue3 Composition API ile modern frontend mimarisi geliştirdim"
+                >
+                  Developed modern frontend architecture with Vue3 Composition
+                  API
+                </li>
+                <li
+                  data-en="Designed and managed Java Spring Boot backend services"
+                  data-tr="Java Spring Boot backend servisleri tasarlayıp yönettim"
+                >
+                  Designed and managed Java Spring Boot backend services
+                </li>
+                <li
+                  data-en="Developed multilingual (TR/EN) cargo tracking system"
+                  data-tr="Çok dilli (TR/EN) kargo takip sistemi geliştirdim"
+                >
+                  Developed multilingual (TR/EN) cargo tracking system
+                </li>
+                <li
+                  data-en="Integrated third-party logistics companies with RESTful APIs"
+                  data-tr="RESTful API'ler ile üçüncü parti lojistik firmalarını entegre ettim"
+                >
+                  Integrated third-party logistics companies with RESTful APIs
+                </li>
+                <li
+                  data-en="Built real-time cargo location and status update system"
+                  data-tr="Gerçek zamanlı kargo konumu ve durum güncellemeleri sistemi kurdum"
+                >
+                  Built real-time cargo location and status update system
+                </li>
+                <li
+                  data-en="Ensured frontend-backend integration with full-stack development"
+                  data-tr="Full-stack geliştirme ile frontend-backend entegrasyonunu sağladım"
+                >
+                  Ensured frontend-backend integration with full-stack
+                  development
+                </li>
+                <li
+                  data-en="Delivered project 2 months ahead of schedule, ensuring customer satisfaction"
+                  data-tr="Projeyi planlanandan 2 ay önce teslim ederek müşteri memnuniyeti sağladım"
+                >
+                  Delivered project 2 months ahead of schedule, ensuring
+                  customer satisfaction
+                </li>
+              </ul>
+            </div>
+
+            <div class="technical-achievements">
+              <strong
+                class="technical-achievements-title"
+                data-en="Technical Achievements:"
+                data-tr="Teknik Başarılar:"
+                >Technical Achievements:</strong
+              >
+              <span
+                data-en="1M+ daily request processing capacity, 15% performance improvement, microservice architecture"
+                data-tr="1M+ günlük istek işleme kapasitesi, %15 performans artışı, mikroservis mimarisi"
+                >1M+ daily request processing capacity, 15% performance
+                improvement, microservice architecture</span
+              >
+            </div>
+          </div>
+
+          <div class="exp-card fade-in">
+            <div class="company-name">TRENDYOL</div>
+            <div class="position">Associate Developer</div>
+            <div
+              class="duration"
+              data-en="June 2022 - August 2022"
+              data-tr="Haziran 2022 - Ağustos 2022"
+            >
+              June 2022 - August 2022
+            </div>
+            <p
+              class="exp-description"
+              data-en="High-performance solutions at Turkey's leading e-commerce platform"
+              data-tr="Türkiye'nin lider e-ticaret platformunda yüksek performanslı çözümler"
+            >
+              High-performance solutions at Turkey's leading e-commerce platform
+            </p>
+            <ul class="achievements">
+              <li
+                data-en="Developed e-commerce systems with React and Node.js"
+                data-tr="React ve Node.js ile e-ticaret sistemleri geliştirdim"
+              >
+                Developed e-commerce systems with React and Node.js
+              </li>
+              <li
+                data-en="Created data visualization components with Chart.js"
+                data-tr="Chart.js ile veri görselleştirme bileşenleri oluşturdum"
+              >
+                Created data visualization components with Chart.js
+              </li>
+              <li
+                data-en="Worked on message processing systems with Apache Kafka"
+                data-tr="Apache Kafka ile mesaj işleme sistemlerinde çalıştım"
+              >
+                Worked on message processing systems with Apache Kafka
+              </li>
+              <li
+                data-en="Performed PostgreSQL query optimizations"
+                data-tr="PostgreSQL sorgu optimizasyonları gerçekleştirdim"
+              >
+                Performed PostgreSQL query optimizations
+              </li>
+              <li
+                data-en="Learned containerization processes with Docker"
+                data-tr="Docker ile containerization süreçlerini öğrendim"
+              >
+                Learned containerization processes with Docker
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2
+          class="section-title fade-in"
+          data-en="Technical Skills"
+          data-tr="Teknik Yetenekler"
+        >
+          Technical Skills
+        </h2>
+        <p
+          class="section-subtitle fade-in"
+          data-en="Technologies and tools I specialize in"
+          data-tr="Uzmanlaştığım teknolojiler ve araçlar"
+        >
+          Technologies and tools I specialize in
+        </p>
+
+        <div class="skills-grid">
+          <div class="skill-category fade-in">
+            <h3 data-en="Frontend Development" data-tr="Frontend Geliştirme">
+              Frontend Development
+            </h3>
+            <div class="skill-tags">
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">Vue.js</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">Pixi.js</span>
+              <span class="skill-tag">Chart.js</span>
+            </div>
+          </div>
+
+          <div class="skill-category fade-in">
+            <h3 data-en="Backend Development" data-tr="Backend Geliştirme">
+              Backend Development
+            </h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Java Spring Boot</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Express</span>
+              <span class="skill-tag">RESTful APIs</span>
+              <span class="skill-tag">Microservices</span>
+            </div>
+          </div>
+
+          <div class="skill-category fade-in">
+            <h3 data-en="Database & Tools" data-tr="Veritabanı & Araçlar">
+              Database & Tools
+            </h3>
+            <div class="skill-tags">
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Apache Kafka</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">Webpack</span>
+              <span class="skill-tag">Vite</span>
+            </div>
+          </div>
+
+          <div class="skill-category fade-in">
+            <h3 data-en="Methodologies" data-tr="Metodolojiler">
+              Methodologies
+            </h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Agile/Scrum</span>
+              <span class="skill-tag">TDD</span>
+              <span class="skill-tag">Performance Optimization</span>
+              <span class="skill-tag">System Architecture</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section alt-bg" id="contact">
+      <div class="container">
+        <h2
+          class="section-title fade-in"
+          data-en="Get In Touch"
+          data-tr="İletişime Geçin"
+        >
+          Get In Touch
+        </h2>
+        <p
+          class="section-subtitle fade-in"
+          data-en="Feel free to contact me for your projects"
+          data-tr="Projeleriniz için benimle iletişime geçebilirsiniz"
+        >
+          Feel free to contact me for your projects
+        </p>
+
+        <div class="contact-grid">
+          <a
+            href="mailto:uzunoneroguzcan@gmail.com"
+            class="contact-item fade-in"
+          >
+            <span class="contact-icon">✉️</span>
+            <div class="contact-label" data-en="Email" data-tr="E-posta">
+              Email
+            </div>
+            <div class="contact-value">uzunoneroguzcan@gmail.com</div>
+          </a>
+
+          <a
+            href="https://linkedin.com/in/oguzcanuzunoner"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-item fade-in"
+          >
+            <span class="contact-icon">💼</span>
+            <div class="contact-label">LinkedIn</div>
+            <div class="contact-value">Professional Network</div>
+          </a>
+
+          <a
+            href="https://github.com/oguzcanuzunoner"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-item fade-in"
+          >
+            <span class="contact-icon">🔗</span>
+            <div class="contact-label">GitHub</div>
+            <div class="contact-value">Code Repository</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
