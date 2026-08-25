@@ -1,9 +1,23 @@
-<!DOCTYPE html>
-<html lang="tr">
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oğuzcan UZUNÖNER - Software Developer</title>
+    <title>Oğuzcan Uzunöner — Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Full Stack Developer building national-scale platforms — Angular and Vue on the front end, .NET and Java Spring Boot on the back end. Rail ticketing, enterprise and logistics systems."
+    />
+    <meta
+      property="og:title"
+      content="Oğuzcan Uzunöner — Full Stack Developer"
+    />
+    <meta
+      property="og:description"
+      content="National-scale platforms, end to end. Rail ticketing · Enterprise systems · International logistics."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.oguzcanuzunoner.com/" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -29,18 +43,32 @@
             <a href="#contact" data-en="Contact" data-tr="İletişim">Contact</a>
           </li>
           <li class="language-switcher">
-            <button class="theme-toggle" id="themeToggle">🌙</button>
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              aria-label="Toggle theme"
+            >
+              🌙
+            </button>
             <button class="lang-btn active" data-lang="en">EN</button>
             <button class="lang-btn" data-lang="tr">TR</button>
           </li>
         </ul>
-        <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+        <button
+          class="mobile-menu-toggle"
+          id="mobileMenuToggle"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
       </div>
     </nav>
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-      <button class="mobile-close" id="mobileClose">×</button>
+      <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+        ×
+      </button>
       <a href="#hero" data-en="Home" data-tr="Ana Sayfa">Home</a>
       <a href="#about" data-en="About" data-tr="Hakkımda">About</a>
       <a href="#experience" data-en="Experience" data-tr="Deneyim"
@@ -49,7 +77,13 @@
       <a href="#skills" data-en="Skills" data-tr="Yetenekler">Skills</a>
       <a href="#contact" data-en="Contact" data-tr="İletişim">Contact</a>
       <div class="mobile-controls">
-        <button class="theme-toggle" id="mobileThemeToggle">🌙</button>
+        <button
+          class="theme-toggle"
+          id="mobileThemeToggle"
+          aria-label="Toggle theme"
+        >
+          🌙
+        </button>
         <button class="lang-btn active" data-lang="en" id="mobileLangEn">
           EN
         </button>
@@ -64,15 +98,16 @@
           Hello, I'm
         </div>
         <h1 class="hero-name">Oğuzcan Uzunöner</h1>
-        <h2 class="hero-title">Software Developer</h2>
+        <h2 class="hero-title">Full Stack Developer</h2>
         <p
           class="hero-description"
-          data-en="I'm a software developer who creates high-performance web applications, prioritizes user experience, and builds scalable solutions with modern technologies."
-          data-tr="Yüksek performanslı web uygulamaları geliştiren, kullanıcı deneyimini ön planda tutan ve modern teknolojilerle ölçeklenebilir çözümler üreten bir yazılım geliştiricisiyim."
+          data-en="I build national-scale platforms end to end — Angular and Vue on the front end, .NET and Java Spring Boot on the back end. Currently working on Turkey's national rail ticketing system and a large-scale enterprise platform."
+          data-tr="Ulusal ölçekte platformları uçtan uca geliştiriyorum — front end'de Angular ve Vue, back end'de .NET ve Java Spring Boot. Şu an Türkiye'nin ulusal demiryolu bilet sistemi ve büyük ölçekli bir kurumsal platform üzerinde çalışıyorum."
         >
-          I'm a software developer who creates high-performance web
-          applications, prioritizes user experience, and builds scalable
-          solutions with modern technologies.
+          I build national-scale platforms end to end — Angular and Vue on the
+          front end, .NET and Java Spring Boot on the back end. Currently
+          working on Turkey's national rail ticketing system and a large-scale
+          enterprise platform.
         </p>
         <div class="cta-buttons">
           <a
@@ -98,22 +133,22 @@
       <div class="container">
         <h2
           class="section-title fade-in"
-          data-en="Success Statistics"
-          data-tr="Başarı İstatistikleri"
+          data-en="Career in Numbers"
+          data-tr="Rakamlarla Kariyerim"
         >
-          Success Statistics
+          Career in Numbers
         </h2>
         <p
           class="section-subtitle fade-in"
-          data-en="My professional journey in numbers"
-          data-tr="Rakamlarla profesyonel yolculuğum"
+          data-en="Real, verifiable scale — no inflated metrics"
+          data-tr="Gerçek ve doğrulanabilir ölçek — şişirilmiş metrik yok"
         >
-          My professional journey in numbers
+          Real, verifiable scale — no inflated metrics
         </p>
 
         <div class="stats-grid">
           <div class="stat-item fade-in">
-            <div class="stat-number" data-target="3">0</div>
+            <div class="stat-number" data-target="4">0</div>
             <div
               class="stat-label"
               data-en="Years Experience"
@@ -133,23 +168,23 @@
             </div>
           </div>
           <div class="stat-item fade-in">
-            <div class="stat-number" data-target="1">0</div>
+            <div class="stat-number" data-target="10">0</div>
             <div
               class="stat-label"
-              data-en="M+ Daily Requests"
-              data-tr="M+ Günlük İstek"
+              data-en="K+ Concurrent Sessions"
+              data-tr="K+ Eşzamanlı Oturum"
             >
-              M+ Daily Requests
+              K+ Concurrent Sessions
             </div>
           </div>
           <div class="stat-item fade-in">
             <div class="stat-number" data-target="40">0</div>
             <div
               class="stat-label"
-              data-en="% Efficiency Increase"
-              data-tr="% Verimlilik Artışı"
+              data-en="+ Enterprise Reports Delivered"
+              data-tr="+ Kurumsal Rapor"
             >
-              % Efficiency Increase
+              + Enterprise Reports Delivered
             </div>
           </div>
         </div>
@@ -187,69 +222,108 @@
             </div>
             <p
               class="exp-description"
-              data-en="Software development at Turkey's leading transportation and logistics technology company"
-              data-tr="Türkiye'nin lider ulaşım ve lojistik teknoloji şirketinde yazılım geliştirme"
+              data-en="Building national-scale platforms, working across frontend and backend on every product"
+              data-tr="Ulusal ölçekte platformlar; her üründe hem frontend hem backend tarafında"
             >
-              Software development at Turkey's leading transportation and
-              logistics technology company
+              Building national-scale platforms, working across frontend and
+              backend on every product
             </p>
 
             <!-- Railway Project -->
             <div class="project-box project-box-railway">
               <h4
                 class="project-title"
-                data-en="🚄 Railway Transportation Platform"
-                data-tr="🚄 Demiryolu Ulaşım Platformu"
+                data-en="🚄 Rail Ticketing Platform — Turkey's national rail system"
+                data-tr="🚄 Demiryolu Bilet Platformu — Türkiye'nin ulusal demiryolu sistemi"
               >
-                🚄 Railway Transportation Platform
+                🚄 Rail Ticketing Platform — Turkey's national rail system
               </h4>
+              <div class="project-stack">
+                Vue 2 · TypeScript · Java Spring Boot · Pixi.js
+              </div>
               <ul class="achievements project-achievements">
                 <li
-                  data-en="Contributed to the development of a ticketing system serving 100,000+ daily users"
-                  data-tr="100.000+ günlük kullanıcıya hizmet veren biletleme sisteminin geliştirilmesine katkıda bulundum"
+                  data-en="Developed the core ticketing and booking flow serving 100,000+ daily users, end to end from the Vue 2 frontend to Spring Boot REST services"
+                  data-tr="100.000+ günlük kullanıcıya hizmet veren bilet ve rezervasyon akışını, Vue 2 frontend'den Spring Boot REST servislerine kadar uçtan uca geliştirdim"
                 >
-                  Contributed to the development of a ticketing system serving
-                  100,000+ daily users
+                  Developed the core ticketing and booking flow serving 100,000+
+                  daily users, end to end from the Vue 2 frontend to Spring Boot
+                  REST services
                 </li>
                 <li
-                  data-en="Implemented ticket search, selection, and purchase flow with Vue.js and TypeScript"
-                  data-tr="Vue.js ve TypeScript kullanarak bilet arama, seçim ve satın alma akışını uyguladım"
+                  data-en="Engineered the seat-selection algorithm handling 10,000+ concurrent sessions during peak sales periods"
+                  data-tr="Yoğun satış dönemlerinde 10.000+ eşzamanlı oturumu kaldıran koltuk seçim algoritmasını geliştirdim"
                 >
-                  Implemented ticket search, selection, and purchase flow with
-                  Vue.js and TypeScript
+                  Engineered the seat-selection algorithm handling 10,000+
+                  concurrent sessions during peak sales periods
                 </li>
                 <li
-                  data-en="Built interactive train seat map and selection system with Pixi.js"
-                  data-tr="Pixi.js ile etkileşimli tren koltuk haritası ve seçim sistemi geliştirdim"
+                  data-en="Built interactive train-car visualization components with Pixi.js, rendering live seat availability per car"
+                  data-tr="Pixi.js ile vagon bazında canlı koltuk durumunu gösteren etkileşimli görselleştirme bileşenleri geliştirdim"
                 >
-                  Built interactive train seat map and selection system with
-                  Pixi.js
+                  Built interactive train-car visualization components with
+                  Pixi.js, rendering live seat availability per car
                 </li>
                 <li
-                  data-en="Assisted in integrating Yolcu360 car rental services"
-                  data-tr="Yolcu360 araç kiralama entegrasyonunda ekibe katkı sağladım"
+                  data-en="Integrated real-time seat status and price updates into the booking flow"
+                  data-tr="Gerçek zamanlı koltuk durumu ve fiyat güncellemelerini rezervasyon akışına entegre ettim"
                 >
-                  Assisted in integrating Yolcu360 car rental services
+                  Integrated real-time seat status and price updates into the
+                  booking flow
                 </li>
                 <li
-                  data-en="Integrated real-time seat status and price updates"
-                  data-tr="Gerçek zamanlı koltuk durumu ve fiyat güncellemelerini entegre ettim"
+                  data-en="Contributed to third-party integrations such as car rental services on the platform"
+                  data-tr="Platformdaki araç kiralama gibi üçüncü parti entegrasyonlara katkı sağladım"
                 >
-                  Integrated real-time seat status and price updates
+                  Contributed to third-party integrations such as car rental
+                  services on the platform
+                </li>
+              </ul>
+            </div>
+
+            <!-- Enterprise Project -->
+            <div class="project-box project-box-enterprise">
+              <h4
+                class="project-title"
+                data-en="🏢 Enterprise Web Platform — large-scale data-intensive system"
+                data-tr="🏢 Kurumsal Web Platformu — büyük ölçekli, veri yoğun sistem"
+              >
+                🏢 Enterprise Web Platform — large-scale data-intensive system
+              </h4>
+              <div class="project-stack">
+                Angular · .NET (C#) · Entity Framework Core · PostgreSQL ·
+                DevExpress
+              </div>
+              <ul class="achievements project-achievements">
+                <li
+                  data-en="Developed 40+ reports on a DevExpress reporting engine, from data layer to printable layouts"
+                  data-tr="DevExpress rapor motoru üzerinde, veri katmanından yazdırılabilir tasarımlara kadar 40+ rapor geliştirdim"
+                >
+                  Developed 40+ reports on a DevExpress reporting engine, from
+                  data layer to printable layouts
                 </li>
                 <li
-                  data-en="Helped improve user experience by 35% with mobile-responsive ticketing flow"
-                  data-tr="Mobil uyumlu biletleme akışı ile kullanıcı deneyimini %35 artırmaya yardımcı oldum"
+                  data-en="Built data-entry screens with complex business rules: multi-line validation, reference-data lookups, approval and posting flows"
+                  data-tr="Karmaşık iş kurallarına sahip veri giriş ekranları geliştirdim: çok satırlı doğrulama, referans veri sorgulamaları, onay ve kayıt akışları"
                 >
-                  Helped improve user experience by 35% with mobile-responsive
-                  ticketing flow
+                  Built data-entry screens with complex business rules:
+                  multi-line validation, reference-data lookups, approval and
+                  posting flows
                 </li>
                 <li
-                  data-en="Contributed to optimizing ticketing APIs with Java Spring Boot, reducing response time by 20%"
-                  data-tr="Java Spring Boot kullanarak biletleme API’lerini optimize etme çalışmalarına katkıda bulundum, yanıt süresini %20 azalttık"
+                  data-en="Optimized report aggregation by replacing per-record query loops with single grouped SQL queries, reducing ~300 database round-trips to 1 on the heaviest reports"
+                  data-tr="Kayıt başına sorgu döngülerini tek gruplu SQL sorgularıyla değiştirerek en ağır raporlarda ~300 veritabanı sorgusunu 1'e indirdim"
                 >
-                  Contributed to optimizing ticketing APIs with Java Spring
-                  Boot, reducing response time by 20%
+                  Optimized report aggregation by replacing per-record query
+                  loops with single grouped SQL queries, reducing ~300 database
+                  round-trips to 1 on the heaviest reports
+                </li>
+                <li
+                  data-en="Load-tested critical flows with k6 using correlated, production-like scenarios"
+                  data-tr="Kritik akışları k6 ile, korele ve gerçeğe yakın senaryolar kullanarak yük testine tabi tuttum"
+                >
+                  Load-tested critical flows with k6 using correlated,
+                  production-like scenarios
                 </li>
               </ul>
             </div>
@@ -263,118 +337,87 @@
               >
                 🚚 International Logistics Platform
               </h4>
+              <div class="project-stack">
+                Vue 3 Composition API · TypeScript · Java Spring Boot
+              </div>
               <ul class="achievements project-achievements">
                 <li
-                  data-en="Developed modern frontend architecture with Vue3 Composition API"
-                  data-tr="Vue3 Composition API ile modern frontend mimarisi geliştirdim"
+                  data-en="Built a multi-language (TR/EN) shipment tracking system with live third-party carrier integrations"
+                  data-tr="Canlı üçüncü parti taşıyıcı entegrasyonlarına sahip çok dilli (TR/EN) kargo takip sistemi geliştirdim"
                 >
-                  Developed modern frontend architecture with Vue3 Composition
-                  API
+                  Built a multi-language (TR/EN) shipment tracking system with
+                  live third-party carrier integrations
                 </li>
                 <li
-                  data-en="Designed and managed Java Spring Boot backend services"
-                  data-tr="Java Spring Boot backend servisleri tasarlayıp yönettim"
+                  data-en="Developed the frontend architecture with Vue 3 Composition API and TypeScript"
+                  data-tr="Frontend mimarisini Vue 3 Composition API ve TypeScript ile geliştirdim"
                 >
-                  Designed and managed Java Spring Boot backend services
+                  Developed the frontend architecture with Vue 3 Composition API
+                  and TypeScript
                 </li>
                 <li
-                  data-en="Developed multilingual (TR/EN) cargo tracking system"
-                  data-tr="Çok dilli (TR/EN) kargo takip sistemi geliştirdim"
+                  data-en="Designed and maintained Java Spring Boot backend services"
+                  data-tr="Java Spring Boot backend servislerini tasarlayıp geliştirdim"
                 >
-                  Developed multilingual (TR/EN) cargo tracking system
+                  Designed and maintained Java Spring Boot backend services
                 </li>
                 <li
-                  data-en="Integrated third-party logistics companies with RESTful APIs"
-                  data-tr="RESTful API'ler ile üçüncü parti lojistik firmalarını entegre ettim"
+                  data-en="Delivered operational dashboards used daily by the logistics operations team"
+                  data-tr="Lojistik operasyon ekibinin her gün kullandığı operasyonel dashboard'ları geliştirdim"
                 >
-                  Integrated third-party logistics companies with RESTful APIs
-                </li>
-                <li
-                  data-en="Built real-time cargo location and status update system"
-                  data-tr="Gerçek zamanlı kargo konumu ve durum güncellemeleri sistemi kurdum"
-                >
-                  Built real-time cargo location and status update system
-                </li>
-                <li
-                  data-en="Ensured frontend-backend integration with full-stack development"
-                  data-tr="Full-stack geliştirme ile frontend-backend entegrasyonunu sağladım"
-                >
-                  Ensured frontend-backend integration with full-stack
-                  development
-                </li>
-                <li
-                  data-en="Delivered project 2 months ahead of schedule, ensuring customer satisfaction"
-                  data-tr="Projeyi planlanandan 2 ay önce teslim ederek müşteri memnuniyeti sağladım"
-                >
-                  Delivered project 2 months ahead of schedule, ensuring
-                  customer satisfaction
+                  Delivered operational dashboards used daily by the logistics
+                  operations team
                 </li>
               </ul>
-            </div>
-
-            <div class="technical-achievements">
-              <strong
-                class="technical-achievements-title"
-                data-en="Technical Achievements:"
-                data-tr="Teknik Başarılar:"
-                >Technical Achievements:</strong
-              >
-              <span
-                data-en="1M+ daily request processing capacity, 15% performance improvement, microservice architecture"
-                data-tr="1M+ günlük istek işleme kapasitesi, %15 performans artışı, mikroservis mimarisi"
-                >1M+ daily request processing capacity, 15% performance
-                improvement, microservice architecture</span
-              >
             </div>
           </div>
 
           <div class="exp-card fade-in">
             <div class="company-name">TRENDYOL</div>
-            <div class="position">Associate Developer</div>
+            <div class="position">Associate Software Developer</div>
             <div
               class="duration"
-              data-en="June 2022 - August 2022"
-              data-tr="Haziran 2022 - Ağustos 2022"
+              data-en="June 2022 – August 2022"
+              data-tr="Haziran 2022 – Ağustos 2022"
             >
-              June 2022 - August 2022
+              June 2022 – August 2022
             </div>
             <p
               class="exp-description"
-              data-en="High-performance solutions at Turkey's leading e-commerce platform"
-              data-tr="Türkiye'nin lider e-ticaret platformunda yüksek performanslı çözümler"
+              data-en="Internal dashboard and data visualization product on one of Turkey's highest-traffic e-commerce platforms"
+              data-tr="Türkiye'nin en yüksek trafikli e-ticaret platformlarından birinde dahili dashboard ve veri görselleştirme ürünü"
             >
-              High-performance solutions at Turkey's leading e-commerce platform
+              Internal dashboard and data visualization product on one of
+              Turkey's highest-traffic e-commerce platforms
             </p>
             <ul class="achievements">
               <li
-                data-en="Developed projects with React and Node.js"
-                data-tr="React ve Node.js ile projeler geliştirdim"
+                data-en="Built dashboard features end to end with React and Node.js/Express"
+                data-tr="React ve Node.js/Express ile uçtan uca dashboard özellikleri geliştirdim"
               >
-                Developed projects with React and Node.js
+                Built dashboard features end to end with React and
+                Node.js/Express
               </li>
               <li
-                data-en="Created data visualization components with Chart.js"
-                data-tr="Chart.js ile veri görselleştirme bileşenleri oluşturdum"
+                data-en="Created data visualization components with Chart.js for reporting screens used by product teams"
+                data-tr="Ürün ekiplerinin kullandığı rapor ekranları için Chart.js ile veri görselleştirme bileşenleri oluşturdum"
               >
-                Created data visualization components with Chart.js
+                Created data visualization components with Chart.js for
+                reporting screens used by product teams
               </li>
               <li
-                data-en="Worked on message processing systems with Apache Kafka"
-                data-tr="Apache Kafka ile mesaj işleme sistemlerinde çalıştım"
+                data-en="Worked with Apache Kafka consumers feeding real-time data into dashboards"
+                data-tr="Dashboard'lara gerçek zamanlı veri besleyen Apache Kafka consumer'larıyla çalıştım"
               >
-                Worked on message processing systems with Apache Kafka
+                Worked with Apache Kafka consumers feeding real-time data into
+                dashboards
               </li>
               <li
-                data-en="Performed PostgreSQL query optimizations"
-                data-tr="PostgreSQL sorgu optimizasyonları gerçekleştirdim"
+                data-en="Improved slow PostgreSQL queries on high-traffic endpoints and containerized services with Docker, under senior guidance"
+                data-tr="Yüksek trafikli endpoint'lerdeki yavaş PostgreSQL sorgularını iyileştirdim ve servisleri Docker ile container'laştırdım (senior rehberliğinde)"
               >
-                Performed PostgreSQL query optimizations
-              </li>
-              <li
-                data-en="Learned containerization processes with Docker"
-                data-tr="Docker ile containerization süreçlerini öğrendim"
-              >
-                Learned containerization processes with Docker
+                Improved slow PostgreSQL queries on high-traffic endpoints and
+                containerized services with Docker, under senior guidance
               </li>
             </ul>
           </div>
@@ -394,10 +437,10 @@
         </h2>
         <p
           class="section-subtitle fade-in"
-          data-en="Technologies and tools I specialize in"
-          data-tr="Uzmanlaştığım teknolojiler ve araçlar"
+          data-en="Technologies and tools I use in production"
+          data-tr="Canlı ortamda kullandığım teknolojiler ve araçlar"
         >
-          Technologies and tools I specialize in
+          Technologies and tools I use in production
         </p>
 
         <div class="skills-grid">
@@ -406,12 +449,13 @@
               Frontend Development
             </h3>
             <div class="skill-tags">
-              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Angular</span>
+              <span class="skill-tag">Vue.js (2 & 3)</span>
               <span class="skill-tag">TypeScript</span>
-              <span class="skill-tag">Vue.js</span>
+              <span class="skill-tag">JavaScript</span>
               <span class="skill-tag">React</span>
               <span class="skill-tag">HTML5</span>
-              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">CSS3 / Sass</span>
               <span class="skill-tag">Pixi.js</span>
               <span class="skill-tag">Chart.js</span>
             </div>
@@ -422,9 +466,11 @@
               Backend Development
             </h3>
             <div class="skill-tags">
+              <span class="skill-tag">.NET (C#)</span>
+              <span class="skill-tag">Entity Framework Core</span>
               <span class="skill-tag">Java Spring Boot</span>
+              <span class="skill-tag">Hibernate</span>
               <span class="skill-tag">Node.js</span>
-              <span class="skill-tag">Express</span>
               <span class="skill-tag">RESTful APIs</span>
               <span class="skill-tag">Microservices</span>
             </div>
@@ -436,23 +482,29 @@
             </h3>
             <div class="skill-tags">
               <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">MySQL</span>
               <span class="skill-tag">Docker</span>
               <span class="skill-tag">Apache Kafka</span>
               <span class="skill-tag">Git</span>
-              <span class="skill-tag">Webpack</span>
+              <span class="skill-tag">CI/CD</span>
               <span class="skill-tag">Vite</span>
+              <span class="skill-tag">Webpack</span>
             </div>
           </div>
 
           <div class="skill-category fade-in">
-            <h3 data-en="Methodologies" data-tr="Metodolojiler">
-              Methodologies
+            <h3
+              data-en="Testing & Methodologies"
+              data-tr="Test & Metodolojiler"
+            >
+              Testing & Methodologies
             </h3>
             <div class="skill-tags">
-              <span class="skill-tag">Agile/Scrum</span>
-              <span class="skill-tag">TDD</span>
+              <span class="skill-tag">k6 Load Testing</span>
+              <span class="skill-tag">Unit Testing</span>
               <span class="skill-tag">Performance Optimization</span>
-              <span class="skill-tag">System Architecture</span>
+              <span class="skill-tag">Agile/Scrum</span>
+              <span class="skill-tag">Code Review</span>
             </div>
           </div>
         </div>
@@ -497,7 +549,13 @@
           >
             <span class="contact-icon">💼</span>
             <div class="contact-label">LinkedIn</div>
-            <div class="contact-value">Professional Network</div>
+            <div
+              class="contact-value"
+              data-en="Professional Network"
+              data-tr="Profesyonel Ağ"
+            >
+              Professional Network
+            </div>
           </a>
 
           <a
@@ -508,7 +566,13 @@
           >
             <span class="contact-icon">🔗</span>
             <div class="contact-label">GitHub</div>
-            <div class="contact-value">Code Repository</div>
+            <div
+              class="contact-value"
+              data-en="Code Repository"
+              data-tr="Kod Deposu"
+            >
+              Code Repository
+            </div>
           </a>
         </div>
       </div>

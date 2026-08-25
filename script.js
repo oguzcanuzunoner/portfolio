@@ -2,7 +2,7 @@
 function updateScrollIndicator() {
   const scrollTop = window.pageYOffset;
   const docHeight = document.body.scrollHeight - window.innerHeight;
-  const scrollPercent = (scrollTop / docHeight) * 100;
+  const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
   document.getElementById("scrollIndicator").style.width = scrollPercent + "%";
 }
 
@@ -12,7 +12,6 @@ function animateOnScroll() {
   elements.forEach((element) => {
     const elementTop = element.getBoundingClientRect().top;
     const elementVisible = 150;
-
     if (elementTop < window.innerHeight - elementVisible) {
       element.classList.add("visible");
     }
@@ -23,8 +22,8 @@ function animateOnScroll() {
 function animateStats() {
   const statNumbers = document.querySelectorAll(".stat-number");
   statNumbers.forEach((stat) => {
-    const target = parseInt(stat.getAttribute("data-target"));
-    const increment = target / 100;
+    const target = parseInt(stat.getAttribute("data-target"), 10);
+    const increment = Math.max(target / 100, 0.05);
     let current = 0;
 
     const updateCounter = () => {
@@ -56,153 +55,104 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     const target = document.querySelector(this.getAttribute("href"));
     if (target) {
       const offsetTop = target.offsetTop - 80;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth",
-      });
+      window.scrollTo({ top: offsetTop, behavior: "smooth" });
     }
   });
 });
 
-// Event listeners
-window.addEventListener("scroll", () => {
-  updateScrollIndicator();
-  animateOnScroll();
-  animateStats();
-});
+// Scroll listener (passive: tarayici scroll'u bloklamasin)
+window.addEventListener(
+  "scroll",
+  () => {
+    updateScrollIndicator();
+    animateOnScroll();
+    animateStats();
+  },
+  { passive: true }
+);
 
-// Language switching functionality
+// Language switching
 let currentLanguage = "en";
 
 function switchLanguage(lang) {
   currentLanguage = lang;
+  document.documentElement.lang = lang; // <html lang> guncelle (SEO + erisilebilirlik)
 
-  // Update all elements with data attributes
-  const elements = document.querySelectorAll("[data-en][data-tr]");
-  elements.forEach((element) => {
-    const text = element.getAttribute(`data-${lang}`);
-    if (text) {
-      element.textContent = text;
-    }
+  document.querySelectorAll("[data-en][data-tr]").forEach((element) => {
+    const text = element.getAttribute("data-" + lang);
+    if (text) element.textContent = text;
   });
 
-  // Update language buttons (both desktop and mobile)
   document.querySelectorAll(".lang-btn").forEach((btn) => {
-    btn.classList.remove("active");
-    if (btn.getAttribute("data-lang") === lang) {
-      btn.classList.add("active");
-    }
+    btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
   });
 
-  // Save language preference
   localStorage.setItem("preferred-language", lang);
 }
 
-// Language button event listeners
 document.querySelectorAll(".lang-btn").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const lang = btn.getAttribute("data-lang");
-    switchLanguage(lang);
-  });
+  btn.addEventListener("click", () => switchLanguage(btn.getAttribute("data-lang")));
 });
 
-// Theme switching functionality
+// Theme switching
 let isDarkMode = true;
+
+function applyTheme() {
+  const themeToggle = document.getElementById("themeToggle");
+  const mobileThemeToggle = document.getElementById("mobileThemeToggle");
+  document.body.classList.toggle("light-mode", !isDarkMode);
+  const icon = isDarkMode ? "🌙" : "☀️";
+  if (themeToggle) themeToggle.textContent = icon;
+  if (mobileThemeToggle) mobileThemeToggle.textContent = icon;
+}
 
 function toggleTheme() {
   isDarkMode = !isDarkMode;
-  const body = document.body;
-  const themeToggle = document.getElementById("themeToggle");
-  const mobileThemeToggle = document.getElementById("mobileThemeToggle");
-
-  if (isDarkMode) {
-    body.classList.remove("light-mode");
-    themeToggle.textContent = "🌙";
-    mobileThemeToggle.textContent = "🌙";
-  } else {
-    body.classList.add("light-mode");
-    themeToggle.textContent = "☀️";
-    mobileThemeToggle.textContent = "☀️";
-  }
-
-  // Save theme preference
+  applyTheme();
   localStorage.setItem("theme", isDarkMode ? "dark" : "light");
 }
 
-// Mobile menu functionality
+// Mobile menu
 function toggleMobileMenu() {
   const mobileMenu = document.getElementById("mobileMenu");
   mobileMenu.classList.toggle("active");
-
-  if (mobileMenu.classList.contains("active")) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "";
-  }
+  document.body.style.overflow = mobileMenu.classList.contains("active") ? "hidden" : "";
 }
 
 function closeMobileMenu() {
-  const mobileMenu = document.getElementById("mobileMenu");
-  mobileMenu.classList.remove("active");
+  document.getElementById("mobileMenu").classList.remove("active");
   document.body.style.overflow = "";
 }
 
-// Theme toggle event listeners
+// Init — tek DOMContentLoaded blogu
 document.addEventListener("DOMContentLoaded", () => {
-  const themeToggle = document.getElementById("themeToggle");
-  const mobileThemeToggle = document.getElementById("mobileThemeToggle");
-
-  themeToggle.addEventListener("click", toggleTheme);
-  mobileThemeToggle.addEventListener("click", () => {
+  // Tema
+  isDarkMode = (localStorage.getItem("theme") || "dark") !== "light";
+  applyTheme();
+  document.getElementById("themeToggle").addEventListener("click", toggleTheme);
+  document.getElementById("mobileThemeToggle").addEventListener("click", () => {
     toggleTheme();
     closeMobileMenu();
   });
-});
 
-// Mobile menu event listeners
-document.addEventListener("DOMContentLoaded", () => {
-  const mobileMenuToggle = document.getElementById("mobileMenuToggle");
-  const mobileClose = document.getElementById("mobileClose");
+  // Mobil menu
   const mobileMenu = document.getElementById("mobileMenu");
+  document.getElementById("mobileMenuToggle").addEventListener("click", toggleMobileMenu);
+  document.getElementById("mobileClose").addEventListener("click", closeMobileMenu);
+  mobileMenu.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMobileMenu));
 
-  mobileMenuToggle.addEventListener("click", toggleMobileMenu);
-  mobileClose.addEventListener("click", closeMobileMenu);
-
-  // Close mobile menu when clicking on links
-  const mobileLinks = mobileMenu.querySelectorAll("a");
-  mobileLinks.forEach((link) => {
-    link.addEventListener("click", closeMobileMenu);
-  });
-
-  // Mobile language buttons
-  const mobileLangEn = document.getElementById("mobileLangEn");
-  const mobileLangTr = document.getElementById("mobileLangTr");
-
-  mobileLangEn.addEventListener("click", () => {
+  // Mobil dil butonlari
+  document.getElementById("mobileLangEn").addEventListener("click", () => {
     switchLanguage("en");
     closeMobileMenu();
   });
-
-  mobileLangTr.addEventListener("click", () => {
+  document.getElementById("mobileLangTr").addEventListener("click", () => {
     switchLanguage("tr");
     closeMobileMenu();
   });
-});
 
-// Initialize
-document.addEventListener("DOMContentLoaded", () => {
-  // Load saved theme preference or default to dark
-  const savedTheme = localStorage.getItem("theme") || "dark";
-  if (savedTheme === "light") {
-    isDarkMode = false;
-    document.body.classList.add("light-mode");
-    document.getElementById("themeToggle").textContent = "☀️";
-    document.getElementById("mobileThemeToggle").textContent = "☀️";
-  }
-
-  // Load saved language preference or default to English
-  const savedLang = localStorage.getItem("preferred-language") || "en";
-  switchLanguage(savedLang);
+  // Dil
+  switchLanguage(localStorage.getItem("preferred-language") || "en");
 
   animateOnScroll();
   animateStats();
